@@ -98,7 +98,7 @@ Do warehouses need geographic/location metadata?
 Are products specific to companies or shared across the system?
 
 
-Decision	                                 Justification
+                                
 Decision	                                      Justification
 UNIQUE(product_id, warehouse_id) in Inventories	 Prevents duplicate product entries per warehouse
 InventoryLogs table	                             Enables tracking of stock movement for auditing
@@ -106,4 +106,4 @@ ProductBundles table	                         Handles self-referencing many-to-m
 ON DELETE CASCADE on Inventories, Warehouses	 Keeps orphan data from accumulating
 threshold, avgDailySales in Products	         Required for low-stock alerts and forecasting
 is_bundle flag in Products	                     Helps differentiate individual SKUs vs bundles
-Normalized supplier and company relationships	Ensures scalability and clean joins
+Normalized supplier and company relationships	 Ensures scalability and clean joins
